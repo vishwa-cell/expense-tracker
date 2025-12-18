@@ -1,0 +1,152 @@
+/* ========== General Page Layout ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    color: #fff;
+}
+
+/* ========== Header & Titles ========== */
+h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* ========== Logo ========== */
+.img img {
+    width: 120px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* ========== Graph Section ========== */
+.graph {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.plotly_chart {
+    margin-top: 20px;
+}
+
+/* ========== Expenses List Section ========== */
+.expenses {
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.month {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.exp_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.exp_list:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.exp_list .left h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.exp_list .date {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.exp_list .right h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* ========== Add Expense Form ========== */
+.lower {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.exp_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.exp_form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.exp_form input[type="text"],
+.exp_form input[type="number"],
+.exp_form input[type="date"],
+.exp_form select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #2E46C0;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #1C2A8A;
+    transform: scale(1.05);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .exp_list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exp_list .right {
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
